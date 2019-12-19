@@ -7,7 +7,7 @@ export default class RefreshButton extends Component {
         return (
             <div>
                 <a type='button' className='button is-rounded' href='/'>
-                    <i className="fa fa-refresh has-text-primary"></i>
+                    <i className="fa fa-refresh has-text-info"></i>
                 </a>
             </div>
         )
