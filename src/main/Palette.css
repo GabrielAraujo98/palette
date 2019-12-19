@@ -7,3 +7,9 @@
     height: 33.333vh;
 }
 
+.button {
+    position: fixed;
+    right: 1em;
+    top: 1em;
+    box-shadow: 2px 2px 5px #696969cc ;
+}
