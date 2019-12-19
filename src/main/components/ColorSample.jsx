@@ -13,7 +13,7 @@ export default class ColorSample extends Component {
 
     render() {
         return (
-            <section className={`hero has-background-${this.props.hex}`}>
+            <section className={`hero`} style={{backgroundColor: this.getRandomHex()}}>
                 <div className='hero-body'>
                     <h1 className={`has-text-${this.props.color}`}>{this.getRandomHex()}</h1>
                 </div>
