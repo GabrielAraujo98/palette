@@ -15,9 +15,7 @@ export default class ColorSample extends Component {
         return (
             <section className={`hero has-background-${this.props.hex}`}>
                 <div className='hero-body'>
-                    <h1 className={`has-text-${this.props.color}`}>
-                        {/* {getRandomHex()} */}#df1314
-                    </h1>
+                    <h1 className={`has-text-${this.props.color}`}>{this.getRandomHex()}</h1>
                 </div>
             </section>
         )
