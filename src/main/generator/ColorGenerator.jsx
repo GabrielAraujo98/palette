@@ -20,6 +20,6 @@ export default class ColorGenerator extends Component {
                 <ColorSample style={this.getRandomHex()} />
                 <ColorSample style={this.getRandomHex()} />
             </div>
-        )
+        );
     }
 }
