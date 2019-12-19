@@ -16,11 +16,9 @@ export default class ColorGenerator extends Component {
     render() {
         return (
             <div>
-                <ColorSample color='white' style={this.getRandomHex()} />
-                <ColorSample color='white' style={this.getRandomHex()} />
-                <ColorSample color='white' style={this.getRandomHex()} />
-                <ColorSample color='white' style={this.getRandomHex()} />
-                <ColorSample color='white' style={this.getRandomHex()} />
+                <ColorSample style={this.getRandomHex()} />
+                <ColorSample style={this.getRandomHex()} />
+                <ColorSample style={this.getRandomHex()} />
             </div>
         )
     }
