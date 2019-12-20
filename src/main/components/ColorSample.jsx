@@ -2,8 +2,6 @@ import React, { Component } from 'react'
 
 export default class ColorSample extends Component {
 
-
-
     render() {
         return (
             <section className={`hero`} style={{ backgroundColor: this.props.style }}>
