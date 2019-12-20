@@ -17,7 +17,7 @@ export default class ColorGenerator extends Component {
     hexGenerator = () => {
         var children = []
         children.push( <RefreshButton key='button' function={this.hexGenerator} />)
-        for (var h = 0; h < 5; h++) {
+        for (var h = 0; h < 3; h++) {
             var letters = '0123456789ABCDEF'.split('');
             var color = '#';
             for (var i = 0; i < 6; i++) {

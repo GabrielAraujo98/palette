@@ -2,8 +2,6 @@ import React, { Component } from 'react'
 
 import 'font-awesome/css/font-awesome.min.css'
 
-// import { hexGenerator, getRandomHex } from '../functions/hexGenerator'
-
 export default class RefreshButton extends Component {
 
     render() {
