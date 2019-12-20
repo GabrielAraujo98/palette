@@ -4,7 +4,7 @@ export default class ColorSample extends Component {
 
     render() {
         return (
-            <section className='hero' style={{ backgroundColor: this.props.style}}>
+            <section className='' style={{ backgroundColor: this.props.style}}>
                 <div className='hero-body'>
                     <span className='tags has-addons'>
                         <div className='tag is-medium'>
