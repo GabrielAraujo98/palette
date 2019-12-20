@@ -23,14 +23,14 @@ export default class ColorGenerator extends Component {
             for (var i = 0; i < 6; i++) {
                 color += letters[Math.floor(Math.random() * 16)];
             }
-            children.push(<ColorSample key={h} style={color} />)
+            children.push(<ColorSample class='column is-4' key={h} style={color} />)
         } 
         this.setState({colors: children})
     }    
 
     render() {
         return (
-            <div>            
+            <div className='columns'>            
                {
                    this.state.colors
                }
