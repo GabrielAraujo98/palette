@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
 
 import RefreshButton from './RefreshButton'
 
@@ -14,12 +15,12 @@ export default class Header extends Component {
                     </div>
                     <div className="navbar-menu">
                         <div className="navbar-start">
-                            <a className="navbar-item" href="/">
-                                Select your Palette
-                            </a>
-                            <a className="navbar-item" href="/">
-                                Generator
-                            </a>
+                                <Link className="navbar-item" to={this.props.home} >
+                                    Select your Palette
+                                </Link>
+                                <Link className="navbar-item" to={this.props.palette}>
+                                    Generator
+                                </Link>
                         </div>
                     </div>
                     <div className="navbar-end">

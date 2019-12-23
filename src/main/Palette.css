@@ -1,6 +1,6 @@
 .hero-body {
     width: 34vw;
-    height: 93.6vh;
+    height: 96vh;
 }
 
 @media (max-width: 688px){
@@ -8,4 +8,9 @@
         width: 100vw;
         height: 34vh;
     }
+}
+
+.title{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 16em;
 }
