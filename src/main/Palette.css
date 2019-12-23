@@ -1,17 +1,10 @@
 .hero-body {
     width: 34vw;
-    height: 100vh;
+    height: 93.6vh;
 }
 
 @media (max-width: 688px){
     .hero-body {
-        height: 34vh;
+        height: 30vh;
     }
-}
-
-.button {
-    position: fixed;
-    right: 1em;
-    top: 1em;
-    box-shadow: 2px 2px 5px #696969cc ;
 }

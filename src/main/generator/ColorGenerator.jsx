@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 
 import ColorSample from '../components/ColorSample'
-import RefreshButton from '../components/RefreshButton'
+// import RefreshButton from '../components/RefreshButton'
 
 
 export default class ColorGenerator extends Component {
@@ -16,8 +16,8 @@ export default class ColorGenerator extends Component {
 
     hexGenerator = () => {
         var children = [1]
-        children.push( <RefreshButton key='button' function={this.hexGenerator} />)
-        for (var h = 0; h < this.length ; h++) {
+        // children.push( <RefreshButton key='button' function={this.hexGenerator} />)
+        for (var h = 0; h < 3 ; h++) {
             var letters = '0123456789ABCDEF'.split('');
             var color = '#';
             for (var i = 0; i < 6; i++) {
@@ -25,7 +25,9 @@ export default class ColorGenerator extends Component {
             }
             children.push(<ColorSample column={`${h}`} class='column' key={h} style={color} />)
         } 
+        console.log(children);
         this.setState({colors: children})
+        console.log(children);
     }    
 
     render() {
