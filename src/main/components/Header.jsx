@@ -30,7 +30,7 @@ export default class Header extends Component {
                                 <span aria-hidden="true"></span>
                             </a>
                             <div className="buttons">
-                                <RefreshButton function={this.hexGenerator} />
+                                <RefreshButton function={this.props.function} />
                             </div>
                         </div>
                     </div>

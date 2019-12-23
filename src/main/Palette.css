@@ -5,6 +5,7 @@
 
 @media (max-width: 688px){
     .hero-body {
-        height: 30vh;
+        width: 100vw;
+        height: 34vh;
     }
 }
