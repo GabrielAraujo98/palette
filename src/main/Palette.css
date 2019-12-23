@@ -14,6 +14,10 @@
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 16em;
 }
+.subtitle{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 4em;
+}
 
 .sombreado{
     box-shadow: 5px 5px 15px 0 rgba(0, 0, 0, 0.1)
@@ -22,4 +26,17 @@
 .sombreado:hover{
     transition: 0.2s;
     box-shadow: 1px 1px 5px 0 rgba(221, 60, 95, 0.3)
+}
+
+.preview{
+    margin: 1em;
+    padding-left: 0em;
+    padding-right: 0em;
+}
+
+@media (max-width: 688px){
+    .preview-selector{
+        margin-left: 5em;
+        margin-right: 5em;
+    }
 }

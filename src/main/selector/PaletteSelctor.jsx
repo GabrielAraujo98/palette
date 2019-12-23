@@ -1,15 +1,31 @@
 import React, { Component } from 'react'
 
+import PreviewThree from './img/tile-palette-3.png'
+import PreviewFive from './img/tile-palette-5.png'
+
 export default class PaletteSelctor extends Component {
     render() {
         return (
             <div>
-                <h1 className='title is-1 has-text-centered has-text-danger'>Welcome to Palette!</h1>
+                <h1 className='subtitle has-text-centered has-text-danger'>Welcome to Palette!</h1>
                 <p className='subtitle is-3 has-text-centered has-text-black'>Select the your Palette size:</p>
-                <div class="tile is-parent is-vertical">
-                    <article class="tile is-child notification is-white sombreado">
-                        <p class="">Vertical...</p>
-                    </article>
+                <div className='columns is-centered'>
+                    <div className='column is-2 has-text-centered'>
+                        <img src={PreviewThree} alt='Preview three' className="preview sombreado" />
+                        <div className='columns'>
+                            <div className='column'>
+                                <p className='tag is-danger is-medium'>3 colors Palette</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div className='column is-2 has-text-centered'>
+                        <img src={PreviewFive} alt='Preview Five' className="preview sombreado" />
+                        <div className='columns'>
+                            <div className='column'>
+                                <p className='tag is-danger is-medium'>5 colors Palette</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         )
