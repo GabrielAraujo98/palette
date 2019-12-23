@@ -13,9 +13,16 @@ export default class Palette extends Component {
         super(props);
         this.state = { 
             colors: [],
-            palette: 3 
+            palette: 3,
+            // palette: key 
         };
     }
+   
+      selectPalette = () => {
+        this.setState(state => ({ palette: this.key }));
+        console.log(this.key);     
+           
+      };
 
     //Generate HexCode before the page open
     componentDidMount(){
