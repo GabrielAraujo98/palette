@@ -21,14 +21,15 @@ export default class Palette extends Component {
 
     //HexCode and Components Generator
     hexGenerator = () => {
+        let palette = 3
         var children = []
-        for (var h = 0; h < 3 ; h++) {
+        for (var h = 0; h < palette ; h++) {
             var letters = '0123456789ABCDEF'.split('');
             var color = '#';
             for (var i = 0; i < 6; i++) {
                 color += letters[Math.floor(Math.random() * 16)];
             }
-            children.push(<ColorSample column={`${h}`} class='column' key={h} hexCode={color} />)
+            children.push(<ColorSample column={`${palette}`} class='column' key={h} hexCode={color} />)
         } 
         this.setState({colors: children})
     }  
@@ -37,7 +38,7 @@ export default class Palette extends Component {
         return (
             <div>                
                 <Header function={this.hexGenerator} palette='/colorgenerator' home='/'/>
-                <Routers colors={this.state.colors}/>
+                <Routers colors={this.state.colors} />
             </div>
         )
     }

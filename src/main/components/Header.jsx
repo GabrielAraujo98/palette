@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 
 import RefreshButton from './RefreshButton'
+import Logo from './img/palette-logo.png'
 
 export default class Header extends Component {
     render() {
@@ -10,7 +11,7 @@ export default class Header extends Component {
                 <nav className="navbar is-transparent" role="navigation" aria-label="main navigation">
                     <div className="navbar-brand">
                         <a className="navbar-item" href="/">
-                            <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28" alt='Palette Logo' />
+                            <img src={Logo} width="112" height="28" alt='Palette Logo' />
                         </a>
                     </div>
                     <div className="navbar-menu">

@@ -11,20 +11,24 @@ export default class PaletteSelctor extends Component {
                 <p className='subtitle is-3 has-text-centered has-text-black'>Select the your Palette size:</p>
                 <div className='columns is-centered'>
                     <div className='column is-2 has-text-centered'>
-                        <img src={PreviewThree} alt='Preview three' className="preview sombreado" />
-                        <div className='columns'>
-                            <div className='column'>
-                                <p className='tag is-danger is-medium'>3 colors Palette</p>
+                        <a href='/'>
+                            <img src={PreviewThree} alt='Preview three' className="preview sombreado" />
+                            <div className='columns'>
+                                <div className='column'>
+                                    <p className='tag is-danger is-medium sombreado'>3 colors Palette</p>
+                                </div>
                             </div>
-                        </div>
+                        </a>
                     </div>
                     <div className='column is-2 has-text-centered'>
-                        <img src={PreviewFive} alt='Preview Five' className="preview sombreado" />
-                        <div className='columns'>
-                            <div className='column'>
-                                <p className='tag is-danger is-medium'>5 colors Palette</p>
+                        <a href='/'>
+                            <img src={PreviewFive} alt='Preview Five' className="preview sombreado" />
+                            <div className='columns'>
+                                <div className='column'>
+                                    <p className='tag is-danger is-medium sombreado'>5 colors Palette</p>
+                                </div>
                             </div>
-                        </div>
+                        </a>
                     </div>
                 </div>
             </div>
