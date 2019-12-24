@@ -15,6 +15,7 @@ export default class Header extends Component {
         }
     }
     
+    //Add or Remove class '.is-active' to the 'a' burger and '#navbarBasicExemple' 
     isActive(){
         if(this.state.class === ''){
             this.setState({class: 'is-active'}) 
@@ -28,9 +29,9 @@ export default class Header extends Component {
             <div>
                 <nav className="navbar" role="navigation" aria-label="main navigation">
                     <div className="navbar-brand">
-                        <a className="navbar-item" href="/">
+                        <span className="navbar-item">
                             <img src={Logo} width="112" height="28" alt='Palette Logo' />
-                        </a>
+                        </span>
 
                         <a href='#void' id='burger' role="button" className={`navbar-burger burger ${this.state.class}`} aria-label="menu"
                             aria-expanded="false" data-target="navbarBasicExample" onClick={this.isActive}>
