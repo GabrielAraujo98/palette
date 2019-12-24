@@ -14,7 +14,7 @@ export default class Palette extends Component {
         this.state = {
             colors: [],
             palette: 5
-        };
+        }
     }
 
     // selectPalette = () => {

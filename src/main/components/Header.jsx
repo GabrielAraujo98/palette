@@ -5,6 +5,24 @@ import RefreshButton from './RefreshButton'
 import Logo from './img/palette-logo.png'
 
 export default class Header extends Component {
+    
+    constructor(props){
+        super(props)
+
+        this.isActive = this.isActive.bind(this)
+        this.state = {
+            class: ''
+        }
+    }
+    
+    isActive(){
+        if(this.state.class === ''){
+            this.setState({class: 'is-active'}) 
+        } else {
+            this.setState({class: ''})            
+        }
+    }
+
     render() {
         return (
             <div>
@@ -14,15 +32,15 @@ export default class Header extends Component {
                             <img src={Logo} width="112" height="28" alt='Palette Logo' />
                         </a>
 
-                        <a role="button" className="navbar-burger burger" aria-label="menu"
-                            aria-expanded="false" data-target="navbarBasicExample">
+                        <a id='burger' role="button" className={`navbar-burger burger ${this.state.class}`} aria-label="menu"
+                            aria-expanded="false" data-target="navbarBasicExample" onClick={this.isActive}>
                             <span aria-hidden="true"></span>
                             <span aria-hidden="true"></span>
                             <span aria-hidden="true"></span>
                         </a>
                     </div>
 
-                    <div id="navbarBasicExample" className="navbar-menu">
+                    <div id="navbarBasicExample" className={`navbar-menu ${this.state.class}`}>
                         <div className="navbar-start">
                             <Link className="navbar-item" to={this.props.home} >
                                 Select your Palette
