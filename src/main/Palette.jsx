@@ -17,6 +17,14 @@ export default class Palette extends Component {
         }
     }
 
+    selectPalette() {
+        if(this.props.palette === 'three'){
+            this.setState({palette: 3})
+        }else if(this.props.palette === 'five'){
+            this.setState({palette: 5})
+        }
+    }
+
     //Generate HexCode before the page open
     componentDidMount() {
         this.hexGenerator();

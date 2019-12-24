@@ -46,6 +46,7 @@ export default class Header extends Component {
                             <Link className="navbar-item" to={this.props.home} >
                                 Select your Palette
                             </Link>
+                            
                             <Link className="navbar-item" to={this.props.palette}>
                                 Generator
                             </Link>
