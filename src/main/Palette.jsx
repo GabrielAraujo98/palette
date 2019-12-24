@@ -13,7 +13,7 @@ export default class Palette extends Component {
         super(props);
         this.state = {
             colors: [],
-            palette: 3
+            palette: 5
         };
     }
 

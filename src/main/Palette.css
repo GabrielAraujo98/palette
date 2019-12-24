@@ -7,7 +7,7 @@
 @media (max-width: 688px){
     .hero-body {
         width: 100vw;
-        height: 34vh;
+        height: 31vh;
     }
 }
 .column-3{
@@ -17,7 +17,7 @@
 @media (max-width: 688px){
     .column-3{
         width: 100vw;
-        height: 34vh;
+        height: 31vh;
     }
 }
 
