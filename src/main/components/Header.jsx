@@ -32,7 +32,7 @@ export default class Header extends Component {
                             <img src={Logo} width="112" height="28" alt='Palette Logo' />
                         </a>
 
-                        <a id='burger' role="button" className={`navbar-burger burger ${this.state.class}`} aria-label="menu"
+                        <a href='#void' id='burger' role="button" className={`navbar-burger burger ${this.state.class}`} aria-label="menu"
                             aria-expanded="false" data-target="navbarBasicExample" onClick={this.isActive}>
                             <span aria-hidden="true"></span>
                             <span aria-hidden="true"></span>
