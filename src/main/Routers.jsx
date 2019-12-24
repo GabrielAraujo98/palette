@@ -9,13 +9,15 @@ import NotFound from './notFound/NotFound'
 export default class Routers extends Component {
     render() {
         return (
-                <Switch>
-                    <Route exact path="/" component={PaletteSelctor} />
-                    <Route path="/colorgenerator">
-                        <ColorGenerator colors={this.props.colors} />
-                    </Route>
-                    <Route path="/*" component={NotFound} />
-                </Switch>
+            <Switch>
+                <Route exact path="/">
+                    <PaletteSelctor />
+                </Route>
+                <Route path="/colorgenerator">
+                    <ColorGenerator colors={this.props.colors} />
+                </Route>
+                <Route path="/*" component={NotFound} />
+            </Switch>
         )
     }
 }
