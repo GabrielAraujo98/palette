@@ -11,7 +11,10 @@ export default class Routers extends Component {
         return (
             <Switch>
                 <Route exact path="/">
-                    <PaletteSelctor />
+                    <PaletteSelctor
+                        functionThree={this.props.selectFunctionThree}
+                        functionFive={this.props.selectFunctionFive}
+                    />
                 </Route>
                 <Route path="/colorgenerator">
                     <ColorGenerator colors={this.props.colors} />

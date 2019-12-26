@@ -10,11 +10,17 @@ export default class PaletteSelector extends Component {
     render() {
         return (
             <div>
-                <h1 className='subtitle has-text-centered has-text-danger'>Welcome to Palette!</h1>
-                <p className='subtitle is-3 has-text-centered has-text-black'>Select your Palette size:</p>
+                <h1 className='subtitle has-text-centered has-text-danger'>
+                    Welcome to Palette!
+                </h1>
+                <p className='subtitle is-3 has-text-centered has-text-black'>
+                    Select your Palette size:
+                </p>
                 <div className='columns is-centered'>
-                    <PaletteButton number={3} image={PreviewThree} />
-                    <PaletteButton number={5} image={PreviewFive} />
+                    <PaletteButton number={3} image={PreviewThree}
+                        function={this.props.functionThree} />
+                    <PaletteButton number={5} image={PreviewFive}
+                        function={this.props.functionFive} />
                 </div>
             </div>
         )

@@ -11,18 +11,21 @@ export default class Palette extends Component {
 
     constructor(props) {
         super(props);
+        
         this.state = {
             colors: [],
             palette: 3
         }
     }
 
-    selectPalette() {
-        if(this.props.palette === 'three'){
-            this.setState({palette: 3})
-        }else if(this.props.palette === 'five'){
-            this.setState({palette: 5})
-        }
+    selectPaletteThree() {
+        console.log('three');
+        this.setState({ palette: 3 })
+    }
+
+    selectPaletteFive(){
+        console.log('five');
+        this.setState({ palette: 5 })
     }
 
     //Generate HexCode before the page open
@@ -39,7 +42,11 @@ export default class Palette extends Component {
             for (var i = 0; i < 6; i++) {
                 color += letters[Math.floor(Math.random() * 16)];
             }
-            code.push(<ColorSample column={`${this.state.palette}`} class='column' key={c} hexCode={color} />)
+            code.push(
+                <ColorSample
+                    column={`${this.state.palette}`}
+                    class='column' key={c} hexCode={color} />
+            )
         }
         this.setState({ colors: code })
     }
@@ -49,7 +56,10 @@ export default class Palette extends Component {
             <div>
                 <Header function={this.hexGenerator}
                     palette='/colorgenerator' home='/' />
-                <Routers colors={this.state.colors} />
+                <Routers colors={this.state.colors} 
+                selectFunctionThree={this.selectPaletteThree} 
+                selectFunctionFive={this.selectPaletteFive} 
+                />
             </div>
         )
     }
