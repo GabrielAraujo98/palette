@@ -43,7 +43,7 @@ export default class Header extends Component {
                         </a>
                     </div>
 
-                    <div id="navbarBasicExample"
+                    <div id="navbarBasicExample" onClick={this.isActive}
                         className={`navbar-menu ${this.state.class}`}>
                         <div className="navbar-start">
                             <Link className="navbar-item" to='/palette/' >
