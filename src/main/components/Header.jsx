@@ -46,11 +46,11 @@ export default class Header extends Component {
                     <div id="navbarBasicExample"
                         className={`navbar-menu ${this.state.class}`}>
                         <div className="navbar-start">
-                            <Link className="navbar-item" to={this.props.home} >
+                            <Link className="navbar-item" to='/' >
                                 Select your Palette
                             </Link>
 
-                            <Link className="navbar-item" to={this.props.palette}>
+                            <Link className="navbar-item" to='/colorgenerator'>
                                 Generator
                             </Link>
                         </div>

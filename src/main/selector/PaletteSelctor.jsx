@@ -19,6 +19,7 @@ export default class PaletteSelector extends Component {
                 <div className='columns is-centered'>
                     <PaletteButton number={3} image={PreviewThree}
                         function={this.props.functionThree} />
+
                     <PaletteButton number={5} image={PreviewFive}
                         function={this.props.functionFive} />
                 </div>

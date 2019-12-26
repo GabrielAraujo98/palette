@@ -42,11 +42,12 @@
 }
 
 .sombreado{
-    box-shadow: 5px 5px 15px 0 rgba(0, 0, 0, 0.1)
+    box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.2)
 }
 
 .sombreado:hover{
-    transition: 0.2s;
+    cursor: pointer;
+    transition: 0.5s;
     box-shadow: 1px 1px 5px 0 rgba(233, 26, 71, 0.6)
 }
 
@@ -66,4 +67,8 @@
 button{
     border: rgba(0, 0, 0, 0);
     background-color: rgba(255, 255, 255, 0);
+}
+
+button img{
+    border-radius: 20px;
 }
