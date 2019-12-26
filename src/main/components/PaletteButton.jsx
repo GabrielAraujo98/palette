@@ -3,6 +3,7 @@ import React, { Component } from 'react'
 export default class PaletteButton extends Component {
 
     render() {
+
         return (
             <div className='column is-2 has-text-centered'>
                 <button onClick={this.props.function} id={`button-${this.props.number}`}
@@ -13,7 +14,7 @@ export default class PaletteButton extends Component {
                         <div className='column'>
                             <p className='tag is-danger is-medium sombreado'>
                                 {this.props.number} colors Palette
-                            </p>
+                                </p>
                         </div>
                     </div>
                 </button>

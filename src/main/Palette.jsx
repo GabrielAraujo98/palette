@@ -11,26 +11,26 @@ export default class Palette extends Component {
 
     constructor(props) {
         super(props);
-        
+
         this.state = {
             colors: [],
-            palette: 3
+            palette: 3,
+            redirect: false
         }
-    }
-
-    selectPaletteThree() {
-        console.log('three');
-        this.setState({ palette: 3 })
-    }
-
-    selectPaletteFive(){
-        console.log('five');
-        this.setState({ palette: 5 })
     }
 
     //Generate HexCode before the page open
     componentDidMount() {
         this.hexGenerator();
+    }
+
+    selectPaletteThree = () => {
+        console.log('three');
+        this.setState({ palette: 3})
+    }
+    selectPaletteFive = () => {
+        console.log('five');
+        this.setState({ palette: 5})
     }
 
     //HexCode and Components Generator
@@ -52,13 +52,14 @@ export default class Palette extends Component {
     }
 
     render() {
+
         return (
             <div>
                 <Header function={this.hexGenerator}
                     palette='/colorgenerator' home='/' />
-                <Routers colors={this.state.colors} 
-                selectFunctionThree={this.selectPaletteThree} 
-                selectFunctionFive={this.selectPaletteFive} 
+                <Routers colors={this.state.colors}
+                    selectFunctionThree={this.selectPaletteThree}
+                    selectFunctionFive={this.selectPaletteFive}
                 />
             </div>
         )
