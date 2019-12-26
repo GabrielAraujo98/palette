@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Switch, Route } from 'react-router-dom'
+import { Switch, Route, Redirect } from 'react-router-dom'
 
 import ColorGenerator from './generator/ColorGenerator'
 import PaletteSelctor from './selector/PaletteSelctor'
@@ -19,7 +19,9 @@ export default class Routers extends Component {
                 <Route path="/colorgenerator">
                     <ColorGenerator colors={this.props.colors} />
                 </Route>
-                <Route path="/*" component={NotFound} />
+                <Route path="/*">
+                <Redirect path="/palette/" />
+                </Route>
             </Switch>
         )
     }
