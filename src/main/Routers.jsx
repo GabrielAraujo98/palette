@@ -3,8 +3,6 @@ import { Switch, Route, Redirect } from 'react-router-dom'
 
 import ColorGenerator from './generator/ColorGenerator'
 import PaletteSelctor from './selector/PaletteSelctor'
-import NotFound from './notFound/NotFound'
-
 
 export default class Routers extends Component {
     render() {
@@ -20,7 +18,7 @@ export default class Routers extends Component {
                     <ColorGenerator colors={this.props.colors} />
                 </Route>
                 <Route path="/*">
-                <Redirect path="/palette/" />
+                    <Redirect path="/palette/" />
                 </Route>
             </Switch>
         )
