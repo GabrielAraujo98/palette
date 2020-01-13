@@ -30,7 +30,9 @@ export default class Header extends Component {
                 <nav className="navbar" role="navigation" aria-label="main navigation">
                     <div className="navbar-brand">
                         <span className="navbar-item">
-                            <img src={Logo} width="112" height="28" alt='Palette Logo' />
+                            <Link className="navbar-item" to='/palette/'>
+                                <img src={Logo} width="112" height="28" alt='Palette Logo' />
+                            </Link>
                         </span>
 
                         <a href='#void' id='burger' role="button"
