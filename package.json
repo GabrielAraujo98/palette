@@ -39,6 +39,6 @@
   },
   "devDependencies": {
     "font-awesome": "^4.7.0",
-    "gh-pages": "^2.1.1"
+    "gh-pages": "^2.2.0"
   }
 }
