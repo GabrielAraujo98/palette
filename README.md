@@ -10,7 +10,7 @@ Create an web application tha randomly generates a color palette with hexadecima
 
 In the project directory, you can run yarn or npm:
 
-### `yarn start` or `npm start`
+#### `yarn start` or `npm start`
 
 Runs the app in the development mode.<br />
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
