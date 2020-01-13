@@ -3,8 +3,6 @@ import { Switch, Route, Redirect } from 'react-router-dom'
 
 import ColorGenerator from './generator/ColorGenerator'
 import PaletteSelctor from './selector/PaletteSelctor'
-import NotFound from './notFound/NotFound'
-
 
 export default class Routers extends Component {
     render() {
