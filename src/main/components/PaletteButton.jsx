@@ -14,7 +14,7 @@ export default class PaletteButton extends Component {
                         className="preview sombreado" />
                     <div className='columns'>
                         <div className='column'>
-                            <p className='tag is-danger is-medium sombreado is-rounded'>
+                            <p className='tag is-medium sombreado is-rounded' style={{ backgroundColor: "#EE2554", color: "#fff" }}>
                                 {this.props.number} colors Palette
                             </p>
                         </div>

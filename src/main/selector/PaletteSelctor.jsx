@@ -10,7 +10,7 @@ export default class PaletteSelector extends Component {
     render() {
         return (
             <div>
-                <h1 className='subtitle has-text-centered has-text-danger'>
+                <h1 className='title has-text-centered' style={{ color: "#45E79C" }} >
                     Welcome to Palette!
                 </h1>
                 <p className='subtitle is-3 has-text-centered has-text-black'>
