@@ -5,6 +5,9 @@
 /.pnp
 .pnp.js
 
+# Arquivos Affinity
+/Affinity
+
 # testing
 /coverage
 

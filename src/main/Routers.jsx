@@ -18,7 +18,7 @@ export default class Routers extends Component {
                     <ColorGenerator colors={this.props.colors} />
                 </Route>
                 <Route path="/*">
-                    <Redirect path="/palette/" />
+                    <Redirect to="/palette/" />
                 </Route>
             </Switch>
         )
