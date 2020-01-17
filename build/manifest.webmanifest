@@ -1,7 +1,7 @@
 {
   "name": "Palette",
   "short_name": "Palette",
-  "start_url": "https://gabrielaraujo98.github.io/palette/",
+  "start_url": ".",
   "display": "standalone",
   "background_color": "#fff",
   "description": "Coolest color Palette generator.",
