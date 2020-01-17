@@ -34,24 +34,14 @@ export default class Header extends Component {
                                 <img src={Logo} width="112" height="28" alt='Palette Logo' />
                             </Link>
                         </span>
-
-                        <a href='#void' id='burger' role="button"
-                            className={`navbar-burger burger ${this.state.class}`}
-                            aria-label="menu" aria-expanded="false"
-                            data-target="navbarBasicExample" onClick={this.isActive}>
-                            <span aria-hidden="true"></span>
-                            <span aria-hidden="true"></span>
-                            <span aria-hidden="true"></span>
-                        </a>
                     </div>
 
-                    <div id="navbarBasicExample" onClick={this.isActive}
+                    <div onClick={this.isActive}
                         className={`navbar-menu ${this.state.class}`}>
                         <div className="navbar-start">
                             <Link className="navbar-item" to='/palette/' >
                                 Select your Palette
                             </Link>
-
                             <Link className="navbar-item" to='/colorgenerator'>
                                 Generator
                             </Link>

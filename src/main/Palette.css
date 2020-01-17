@@ -4,20 +4,20 @@
     height: 96vh;
 }
 
-@media (max-width: 688px){
+@media (max-width: 768px){
     .hero-body {
         width: 100vw;
-        height: 31vh;
+        height: 32vh;
     }
 }
 .column-3{
     width: 34vw;
     height: 96vh;
 }
-@media (max-width: 688px){
+@media (max-width: 768px){
     .column-3{
         width: 100vw;
-        height: 31vh;
+        height: 32vh;
     }
 }
 
@@ -25,10 +25,10 @@
     width: 20vw;
     height: 96vh;
 }
-@media (max-width: 688px){
+@media (max-width: 768px){
     .column-5{
         width: 100vw;
-        height: 19vh;
+        height: 20vh;
     }
 }
 
@@ -42,11 +42,11 @@
 }
 
 .sombreado{
-    box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.2)
+    box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.2);
+    cursor: pointer;
 }
 
 .sombreado:hover{
-    cursor: pointer;
     transition: 0.5s;
     box-shadow: 1px 1px 5px 0 rgba(233, 26, 71, 0.6)
 }

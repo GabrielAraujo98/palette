@@ -2,3 +2,40 @@ body{
     height: 100vh;
     background-color: #fff;
 }
+.navbar{
+    position: absolute;
+    top: 0;
+}
+.buttons{
+    margin-right: 1rem;
+}
+
+@media (max-width: 1024px){
+    .navbar {
+        display: flex !important;
+        flex-direction: row !important;
+        /* justify-content: flex-end !important;    */
+    }
+    .navbar-brand{
+        width: 97%;
+        justify-content: flex-start !important;   
+    }
+    .buttons{
+        width: 3%;
+        justify-content: flex-end !important;   
+    }
+}
+@media (max-width: 690px){
+    .navbar {
+        display: flex !important;
+        flex-direction: row !important;
+    }
+    .navbar-brand{
+        width: 94%;
+        justify-content: flex-start !important;   
+    }
+    .buttons{
+        width: 6%;
+        justify-content: flex-end !important;   
+    }
+}
