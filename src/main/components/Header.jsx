@@ -36,18 +36,6 @@ export default class Header extends Component {
                         </span>
                     </div>
 
-                    {/* <div onClick={this.isActive}
-                        className={`navbar-menu ${this.state.class}`}>
-                        <div className="navbar-start">
-                            <Link className="navbar-item" to='/palette/' >
-                                Select your Palette
-                            </Link>
-                            <Link className="navbar-item" to='/colorgenerator'>
-                                Generator
-                            </Link>
-                        </div>
-                    </div> */}
-
                     <div className="navbar-end">
                         <div className="navbar-item">
                             <div className="buttons">
@@ -56,7 +44,7 @@ export default class Header extends Component {
                         </div>
                     </div>
                 </nav>
-            </div >
+            </div > 
         )
     }
 }
