@@ -1,6 +1,6 @@
-# What is Palette?
+# What is ![Palette Logo](./src/main/components/img/palette-logo.png)?
 
-![Palette Logo](./src/main/components/img/palette-logo.png)
+
 
 It's a personal project created to test my knowledge in CSS Framework Bulma, Javascript and React.js.<br/>
 Access Palette at https://gabrielaraujo98.github.io/palette/ .
