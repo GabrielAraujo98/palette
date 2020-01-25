@@ -1,7 +1,7 @@
 # What is ![Palette Logo](./src/main/components/img/palette-logo-menor.png)?
 
 It's a personal project created to test my knowledge in CSS Framework Bulma, Javascript and React.js.<br/>
-Access Palette at https://gabrielaraujo98.github.io/palette/ .
+Access Palette at https://gabrielaraujo98.github.io/palette/ .<br/>
 
 ## Project Scope
 
