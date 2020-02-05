@@ -9,13 +9,9 @@ import Routers from './Routers'
 
 export default class Palette extends Component {
 
-    constructor(props) {
-        super(props);
-
-        this.state = {
-            colors: [],
-            palette: 3,
-        }
+    state = {
+        colors: [],
+        palette: 3,
     }
 
     //Generate HexCode before the page open
@@ -28,30 +24,40 @@ export default class Palette extends Component {
             palette: 3
         }), () => {
             this.hexGenerator();
-        } );
+        });
     }
     selectPaletteFive = () => {
         this.setState({
             palette: 5
         }, () => {
             this.hexGenerator();
-        } );
-        
+        });
+
     }
 
     //HexCode and Components Generator
     hexGenerator = () => {
         var code = []
-        for (var c = 0; c < this.state.palette; c++) {
-            var letters = '0123456789ABCDEF'.split('');
-            var color = '#';
-            for (var i = 0; i < 6; i++) {
-                color += letters[Math.floor(Math.random() * 16)];
+        for (var hex = 0; hex < this.state.palette; hex++) {
+            var letters = '0123456789ABCDEF'.split('')
+            var red = ''
+            var green = ''
+            var blue = ''
+            var color = '#'
+            for (var r = 0; r < 2; r++) {
+                red += letters[Math.floor(Math.random() * 16)]
             }
+            for (var g = 0; g < 2; g++) {
+                green += letters[Math.floor(Math.random() * 16)]
+            }
+            for (var b = 0; b < 2; b++) {
+                blue += letters[Math.floor(Math.random() * 16)]
+            }
+            color += red + green + blue
             code.push(
                 <ColorSample
                     column={`${this.state.palette}`}
-                    class='column' key={c} hexCode={color} />
+                    class='column' key={hex} hexCode={color} />
             )
         }
         this.setState({ colors: code })
