@@ -91,7 +91,6 @@ export default class Palette extends Component {
                 }
                 color += red + blue + blue                
             }
-            // color += red + green + red
             code.push(
                 <ColorSample
                     column={`${this.state.palette}`}
