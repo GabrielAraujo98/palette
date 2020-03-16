@@ -38,22 +38,58 @@ export default class Palette extends Component {
     //HexCode and Components Generator
     hexGenerator = () => {
         var code = []
+        function getRandomArbitrary(min, max) {
+            return Math.floor(Math.random() * (max - min) + min)
+        }
+        var choser = getRandomArbitrary(1, 3)
+        console.log(choser); 
         for (var hex = 0; hex < this.state.palette; hex++) {
             var letters = '0123456789ABCDEF'.split('')
             var red = ''
             var green = ''
             var blue = ''
             var color = '#'
-            for (var r = 0; r < 2; r++) {
-                red += letters[Math.floor(Math.random() * 16)]
+
+            if (choser === 1){
+                               
+                for (var r = 0; r < 2; r++) {
+                    red += letters[Math.floor(Math.random() * 16)]
+                }
+                for (var g = 0; g < 2; g++) {
+                    green += letters[Math.floor(Math.random() * 16)]
+                }
+                for (var b = 0; b < 2; b++) {
+                    blue += letters[Math.floor(Math.random() * 16)]
+                }
+                color += red + green + red
             }
-            for (var g = 0; g < 2; g++) {
-                green += letters[Math.floor(Math.random() * 16)]
+            if (choser === 2){
+                for (var vm = 0; vm < 2; vm++) {
+                    red += letters[Math.floor(Math.random() * 16)]
+                }
+                for (var vd = 0; vd < 2; vd++) {
+                    green += letters[Math.floor(Math.random() * 16)]
+                }
+                for (var az = 0; az < 2; az++) {
+                    blue += letters[Math.floor(Math.random() * 16)]
+                }
+                console.log(choser);
+                color += red + red + blue
             }
-            for (var b = 0; b < 2; b++) {
-                blue += letters[Math.floor(Math.random() * 16)]
+            if (choser === 3){
+                console.log(choser);
+                for (var v = 0; v < 2; v++) {
+                    red += letters[Math.floor(Math.random() * 16)]
+                }
+                for (var vr = 0; vr < 2; vr++) {
+                    green += letters[Math.floor(Math.random() * 16)]
+                }
+                for (var a = 0; a < 2; a++) {
+                    blue += letters[Math.floor(Math.random() * 16)]
+                }
+                color += red + blue + blue                
             }
-            color += red + green + red
+            // color += red + green + red
             code.push(
                 <ColorSample
                     column={`${this.state.palette}`}
