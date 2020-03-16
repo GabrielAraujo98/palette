@@ -53,7 +53,7 @@ export default class Palette extends Component {
             for (var b = 0; b < 2; b++) {
                 blue += letters[Math.floor(Math.random() * 16)]
             }
-            color += red + green + blue
+            color += red + green + red
             code.push(
                 <ColorSample
                     column={`${this.state.palette}`}
