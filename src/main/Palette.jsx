@@ -41,7 +41,7 @@ export default class Palette extends Component {
         function getRandomArbitrary(min, max) {
             return Math.floor(Math.random() * (max - min) + min)
         }
-        var choser = getRandomArbitrary(1, 3)
+        var choser = getRandomArbitrary(1, 4)
         console.log(choser); 
         for (var hex = 0; hex < this.state.palette; hex++) {
             var letters = '0123456789ABCDEF'.split('')
@@ -63,6 +63,7 @@ export default class Palette extends Component {
                 }
                 color += red + green + red
             }
+
             if (choser === 2){
                 for (var vm = 0; vm < 2; vm++) {
                     red += letters[Math.floor(Math.random() * 16)]
@@ -76,6 +77,7 @@ export default class Palette extends Component {
                 console.log(choser);
                 color += red + red + blue
             }
+
             if (choser === 3){
                 console.log(choser);
                 for (var v = 0; v < 2; v++) {
