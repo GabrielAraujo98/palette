@@ -12,7 +12,7 @@ export default class Header extends Component {
         this.isActive = this.isActive.bind(this)
         this.state = {
             class: ''
-        }
+        }  
     }
 
     //Add or Remove class '.is-active' to the 'a' burger and '#navbarBasicExemple' 
@@ -23,7 +23,7 @@ export default class Header extends Component {
             this.setState({ class: '' })
         }
     }
-
+    
     render() {
         return (
             <div>

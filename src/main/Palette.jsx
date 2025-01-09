@@ -3,7 +3,6 @@ import 'bulma/css/bulma.css'
 import './Palette.css'
 
 import ColorSample from './components/ColorSample'
-import Header from './components/Header'
 import Routers from './Routers'
 
 
@@ -12,6 +11,8 @@ export default class Palette extends Component {
     state = {
         colors: [],
         palette: 3,
+        variations: ['default', 'pastel', 'soft', 'light', 'hard', 'pale'],
+        schemes: ['mono', 'contrast', 'triade', 'tetrade', 'analogic'],
     }
 
     //Generate HexCode before the page open
@@ -34,62 +35,64 @@ export default class Palette extends Component {
         });
 
     }
-
+    
     //HexCode and Components Generator
     hexGenerator = () => {
-        var code = []
-        function getRandomArbitrary(min, max) {
-            return Math.floor(Math.random() * (max - min) + min)
+        
+        function setRandomValue(max) {
+            return Math.floor(Math.random() * max);
         }
-        var choser = getRandomArbitrary(1, 4)
-        console.log(choser); 
-        for (var hex = 0; hex < this.state.palette; hex++) {
-            var letters = '0123456789ABCDEF'.split('')
-            var red = ''
-            var green = ''
-            var blue = ''
-            var color = '#'
 
-            if (choser === 1){
-                               
-                for (var r = 0; r < 2; r++) {
-                    red += letters[Math.floor(Math.random() * 16)]
-                }
-                for (var g = 0; g < 2; g++) {
-                    green += letters[Math.floor(Math.random() * 16)]
-                }
-                for (var b = 0; b < 2; b++) {
-                    blue += letters[Math.floor(Math.random() * 16)]
-                }
-                color += red + green + red
-            }
+        let hue = setRandomValue(360);
+        let ColorScheme = require('color-scheme');
+        
+        let scheme = new ColorScheme;
+        scheme.from_hue(hue)
+            // .scheme(this.schemes[setRandomValue(5)])
+            .scheme(this.state.schemes[2])
+            .variation(this.state.variations[setRandomValue(6)])
+            .distance(Math.random())
+        let colors = scheme.colors();
 
-            if (choser === 2){
-                for (var vm = 0; vm < 2; vm++) {
-                    red += letters[Math.floor(Math.random() * 16)]
-                }
-                for (var vd = 0; vd < 2; vd++) {
-                    green += letters[Math.floor(Math.random() * 16)]
-                }
-                for (var az = 0; az < 2; az++) {
-                    blue += letters[Math.floor(Math.random() * 16)]
-                }
-                console.log(choser);
-                color += red + red + blue
-            }
-
-            if (choser === 3){
-                console.log(choser);
-                for (var v = 0; v < 2; v++) {
-                    red += letters[Math.floor(Math.random() * 16)]
-                }
-                for (var vr = 0; vr < 2; vr++) {
-                    green += letters[Math.floor(Math.random() * 16)]
-                }
-                for (var a = 0; a < 2; a++) {
-                    blue += letters[Math.floor(Math.random() * 16)]
-                }
-                color += red + blue + blue                
+        let code = []
+        for (let hex = 0; hex < this.state.palette; hex++) {
+            let color = []
+            switch(this.state.palette){
+                case 3:
+                    switch(hex){
+                        case 0:
+                            color.push('#'+colors[0 + setRandomValue(3)])
+                        break;
+                        case 1:
+                            color.push('#'+colors[4 + setRandomValue(3)])
+                        break;
+                        case 2:
+                            color.push('#'+colors[8 + setRandomValue(3)])
+                        break;
+                    }
+                    break;
+                case 5:
+                    switch(hex){
+                        case 0:
+                            color.push('#'+colors[0])
+                        break;
+                        case 1:
+                            color.push('#'+colors[1 + setRandomValue(3)])
+                        break;
+                        case 2:
+                            color.push('#'+colors[4])
+                        break;
+                        case 3:
+                            color.push('#'+colors[5 + setRandomValue(3)])
+                        break;
+                        case 4:
+                            color.push('#'+colors[8 + setRandomValue(3)])
+                        break;
+                        // case 5:
+                        //     color.push('#'+colors[9])
+                        // break;
+                    }
+                    break;
             }
             code.push(
                 <ColorSample
@@ -104,11 +107,12 @@ export default class Palette extends Component {
 
         return (
             <div>
-                <Header function={this.hexGenerator} />
                 <Routers colors={this.state.colors}
+                    function={this.hexGenerator}
                     selectFunctionThree={this.selectPaletteThree}
                     selectFunctionFive={this.selectPaletteFive}
-                />
+                >
+                </Routers>
             </div>
         )
     }
