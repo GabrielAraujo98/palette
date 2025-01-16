@@ -1,0 +1,139 @@
+.form-page{
+    height: 100vh;
+    position: relative;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    overflow: hidden;
+}
+
+.banner{
+    position: relative;
+    width: 55%;
+}
+
+.bg-image{
+    width: 100%;
+}
+
+.form-login{
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+}
+
+.form{
+    height: 70vh;
+    width: 312px;
+    justify-content: center;
+    margin: auto;
+}
+
+.banner h2{
+    color: #FFF;
+    font-weight: bolder;
+    font-size: 72px;
+    margin: auto;
+    width: 70%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.logo-icon {
+    position: fixed;
+    top: 20px;
+    left: 15px;
+    height: 50px;
+  }
+
+h3{
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 50px;
+}
+
+.form input{
+    width: 100%;
+    height: 35px;
+    border-radius: 8px;
+    background-color: #ECECEC;
+    border: 1px solid #8C8C8C;
+}
+
+.form div{
+    margin: 5px 0px 30px;
+}
+
+.form div p{
+    text-align: end;
+}
+
+a{
+    color: #47B2DE;
+    text-decoration: underline;
+}
+
+.new-here{
+    text-align: center !important;
+}
+
+.actions{
+    display: grid;
+    gap: 100%;
+}
+
+.actions .button{
+    text-decoration: none;
+    background-color: #F5CD30;
+    color: #1E1E1E;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 8px;
+    width: 100%;
+    height: 50px;
+}
+
+/*Mobile*/
+
+.form-page-mobile{
+    width: 100%;
+    height: 100vh;
+    align-items: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    overflow: hidden;
+}
+
+.banner-mobile{
+    width: 100%;
+}
+
+.banner-mobile h2 {
+    color: #1E1E1E;
+    font-weight: bolder;
+    text-align: center;
+    font-size: 36px;
+    margin: 50px 0;
+    line-height: 1;
+}
+.bg-container{
+    height: 24px;
+    width: 100%;
+    overflow: hidden;
+    position: fixed !important;
+    top: 0 !important;
+}
+.bg-image-mobile{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.banner-mobile .logo{
+    width: 100px;
+    margin: 50px auto 0px;
+    display: block;
+}
