@@ -8,16 +8,6 @@ import LogoIcon from '../../main/components/img/palette-icon.png'
 
 export default class Login extends React.Component {
   
-  state = {
-    pathName: '/login',
-  }
-
-  onClickLogin = () => {
-    this.setState(({
-      pathName: '/palette'
-    }))
-  }
-
   render() {
     const mobileContent = (
       <div className="form-page-mobile">
@@ -25,23 +15,25 @@ export default class Login extends React.Component {
         <div className='bg-container'>
           <img className="bg-image-mobile" src={BackgroundImage} />
         </div>
+      </div>
+      <div className='center'>
         <img className="logo" src={Logo} />
         <h2>Seja bem-vindo,<br/>novamente!</h2>
-      </div>
-      <div className="form-login-mobile">
-        <div className="form">
-          <div>
-            <label htmlFor="">Email/Usuário</label>
-            <input type="email" placeholder='exemplo@email.com'/>
-          </div>
-          <div>
-            <label htmlFor="">Senha</label>
-            <input type="password" placeholder='********'/>
-            <p><a href="#">Esqueceu a senha?</a></p>
-          </div>
-          <div className="actions">
-            <Link className="button" to='/palette' onClickLogin={this.onClickLogin}>Login</Link>
-            <p className="new-here">Novo por aqui? <a href='#'>Cadastre-se!</a></p>
+        <div className="form-login-mobile">
+          <div className="form">
+            <div>
+              <label htmlFor="">Email/Usuário</label>
+              <input type="email" placeholder='exemplo@email.com'/>
+            </div>
+            <div>
+              <label htmlFor="">Senha</label>
+              <input type="password" placeholder='********'/>
+              <p><a href="#">Esqueceu a senha?</a></p>
+            </div>
+            <div className="actions">
+              <Link className="button" to='/palette'>Login</Link>
+              <p className="new-here">Novo por aqui? <a href='#'>Cadastre-se!</a></p>
+            </div>
           </div>
         </div>
       </div>
@@ -67,7 +59,7 @@ export default class Login extends React.Component {
               <p><a href="#">Esqueceu a senha?</a></p>
             </div>
             <div className="actions">
-              <Link className="button" to='/palette' onClickLogin={this.onClickLogin}>Login</Link>
+              <Link className="button" to='/palette'>Login</Link>
               <p className="new-here">Novo por aqui? <a href='#'>Cadastre-se!</a></p>
             </div>
           </div>
