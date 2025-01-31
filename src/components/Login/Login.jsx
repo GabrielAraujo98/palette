@@ -1,12 +1,53 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import styles from './Login.css';
 import BackgroundImage from '../../main/components/img/banner-login.png'
 import { Link } from 'react-router-dom';
 import MatchMediaWrapper from '../../mediaMatcher/mediaMatcher'
 import Logo from '../../main/components/img/palette-logo.png'
 import LogoIcon from '../../main/components/img/palette-icon.png'
+import apiService from '../../services/apiServices';
 
 export default class Login extends React.Component {
+
+  constructor(props){
+    super(props);
+    this.state = {};
+
+    this.state.emailValue = '';
+    this.state.passwordValue = '';
+    this.state.response = '';
+    this.state.loading = true;
+    this.state.error = null;
+    this.state.canContinue = false;
+    this.pathTo = null;
+  }
+
+  handleEmailChange(event){
+    this.setState(prevState => {return prevState, this.state.emailValue = event.target.value});
+  };
+
+  handlePasswordChange(event){
+    this.setState(prevState => {return prevState, this.state.passwordValue = event.target.value});
+  };
+
+  handleLogin() {
+    // Usando o serviço para buscar dados da API
+      apiService
+        .getUserByEmail(this.state.emailValue, this.state.passwordValue)
+        .then(data => {
+          if(data.user[0][3] === this.state.passwordValue){
+              this.setState(prevState => {return prevState, this.state.response = data.user[0], this.state.loading = false });
+              window.location.pathname = "/palette"
+            }
+            else{
+              alert('Usuário ou senha inválidos')
+            }
+        })
+        .catch(error => {
+          this.setState(prevState => {return prevState, this.state.error= error.message, this.state.loading= false });
+        });
+      
+  }
   
   render() {
     const mobileContent = (
@@ -23,16 +64,16 @@ export default class Login extends React.Component {
           <div className="form">
             <div>
               <label htmlFor="">Email/Usuário</label>
-              <input type="email" placeholder='exemplo@email.com'/>
+              <input type="email" placeholder='exemplo@email.com' value={this.state.emailValue} onChange={this.handleEmailChange.bind(this)}/>
             </div>
             <div>
               <label htmlFor="">Senha</label>
-              <input type="password" placeholder='********'/>
+              <input type="password" placeholder='********' value={this.state.passwordValue} onChange={this.handlePasswordChange.bind(this)}/>
               <p><a href="#">Esqueceu a senha?</a></p>
             </div>
             <div className="actions">
-              <Link className="button" to='/palette'>Login</Link>
-              <p className="new-here">Novo por aqui? <a href='#'>Cadastre-se!</a></p>
+              <Link className="button" onClick={this.handleLogin.bind(this)}>Login</Link>
+              <p className="new-here">Novo por aqui? <Link to="/cadastro">Cadastre-se!</Link></p>
             </div>
           </div>
         </div>
@@ -51,16 +92,16 @@ export default class Login extends React.Component {
             <h3>Login</h3>
             <div>
               <label htmlFor="">Email/Usuário</label>
-              <input type="email" placeholder='exemplo@email.com'/>
+              <input type="email" placeholder='exemplo@email.com' value={this.state.emailValue} onChange={this.handleEmailChange.bind(this)}/>
             </div>
             <div>
               <label htmlFor="">Senha</label>
-              <input type="password" placeholder='********'/>
+              <input type="password" placeholder='********' value={this.state.passwordValue} onChange={this.handlePasswordChange.bind(this)}/>
               <p><a href="#">Esqueceu a senha?</a></p>
             </div>
             <div className="actions">
-              <Link className="button" to='/palette'>Login</Link>
-              <p className="new-here">Novo por aqui? <a href='#'>Cadastre-se!</a></p>
+              <Link className="button" onClick={this.handleLogin.bind(this)}>Login</Link>
+              <p className="new-here">Novo por aqui? <Link to="/cadastro">Cadastre-se!</Link></p>
             </div>
           </div>
         </div>
