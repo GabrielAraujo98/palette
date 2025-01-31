@@ -9,7 +9,7 @@ const apiService = {
                     method: 'GET',
                     headers: {
                       'email': email,
-                      'password': password,
+                      password: password,
                       'Content-Type': 'application/json',
                     }
                   })

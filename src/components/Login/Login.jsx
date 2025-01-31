@@ -32,18 +32,16 @@ export default class Login extends React.Component {
 
   handleLogin() {
     // Usando o serviço para buscar dados da API
+    console.log(this.state.emailValue, this.state.passwordValue);
+    
       apiService
         .getUserByEmail(this.state.emailValue, this.state.passwordValue)
         .then(data => {
-          if(data.user[0][3] === this.state.passwordValue){
-              this.setState(prevState => {return prevState, this.state.response = data.user[0], this.state.loading = false });
-              window.location.pathname = "/palette"
-            }
-            else{
-              alert('Usuário ou senha inválidos')
-            }
+          this.setState(prevState => {return prevState, this.state.response = data.user[0], this.state.loading = false });
+          window.location.pathname = "/palette"
         })
         .catch(error => {
+          alert('Usuário ou senha inválidos')
           this.setState(prevState => {return prevState, this.state.error= error.message, this.state.loading= false });
         });
       
