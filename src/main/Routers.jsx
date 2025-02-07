@@ -4,12 +4,16 @@ import Login from './../components/Login'
 import Cadastro from './../components/Cadastro'
 import ColorGenerator from './generator/ColorGenerator'
 import PaletteSelctor from './selector/PaletteSelctor'
-
+import PaletteSugestions from '../components/PaletteSugestions/PaletteSugestions';
+import PalettesGrid from '../components/Assets/PalettesGrid/PalettesGrid';
+import apiService from '../services/apiServices';
 export default class Routers extends Component {
 
     constructor(props) {
         super(props)
     }
+
+
 
     render() {
             return (
@@ -27,6 +31,7 @@ export default class Routers extends Component {
                                 functionThree={this.props.selectFunctionThree}
                                 functionFive={this.props.selectFunctionFive}
                             />}/>
+                        <Route path="/home" element={<PaletteSugestions function={this.props.function}/>}/>
                     </Routes>
                     </div>
                 </Router>

@@ -37,7 +37,7 @@ export default class Login extends React.Component {
       apiService
         .getUserByEmail(this.state.emailValue, this.state.passwordValue)
         .then(data => {
-          this.setState(prevState => {return prevState, this.state.response = data.user[0], this.state.loading = false });
+          this.setState(prevState => {return prevState, this.state.response = 'ok', this.state.loading = false });
           window.location.pathname = "/palette"
         })
         .catch(error => {

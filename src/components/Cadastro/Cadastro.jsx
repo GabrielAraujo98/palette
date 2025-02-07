@@ -26,32 +26,32 @@ export default class Cadastro extends React.Component {
       this.setState(prevState => {return prevState, this.state.emailValue = event.target.value});
     };
   
-    handlePasswordChange(event){
-      this.setState(prevState => {return prevState, this.state.passwordValue = event.target.value});
-    }
+  handlePasswordChange(event){
+    this.setState(prevState => {return prevState, this.state.passwordValue = event.target.value});
+  }
 
-    handleUserChange(event){
-      this.setState(prevState => {return prevState, this.state.userValue = event.target.value});
-    };
-  
-    handleConfirmPasswordChange(event){
-      this.setState(prevState => {return prevState, this.state.confirmPasswordValue = event.target.value});
-    };
+  handleUserChange(event){
+    this.setState(prevState => {return prevState, this.state.userValue = event.target.value});
+  };
 
-    handleCadastro(){
-      if(this.state.passwordValue === this.state.confirmPasswordValue && this.state.passwordValue !== ''){
-        apiService
-          .createUser(this.state.userValue, this.state.emailValue, this.state.passwordValue)
-          .then(data => {
-            console.log(data);
-            window.location.pathname = "/login"
-          }
-          )
-          .catch(error => {
-            this.setState(prevState => {return prevState, this.state.error= error.message, this.state.loading= false });
-          });
-      }
+  handleConfirmPasswordChange(event){
+    this.setState(prevState => {return prevState, this.state.confirmPasswordValue = event.target.value});
+  };
+
+  handleCadastro(){
+    if(this.state.passwordValue === this.state.confirmPasswordValue && this.state.passwordValue !== ''){
+      apiService
+        .createUser(this.state.userValue, this.state.emailValue, this.state.passwordValue)
+        .then(data => {
+          console.log(data);
+          window.location.pathname = "/login"
+        }
+        )
+        .catch(error => {
+          this.setState(prevState => {return prevState, this.state.error= error.message, this.state.loading= false });
+        });
     }
+  }
 
   render() {
     const mobileContent = (

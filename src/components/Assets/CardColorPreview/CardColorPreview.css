@@ -1,0 +1,10 @@
+.color-card{
+    border-radius: 10px;
+    height: 240px;
+    width: 160px;
+    overflow: hidden;
+    margin: 20px;
+}
+.color-sample{
+    width: 100%;
+}
