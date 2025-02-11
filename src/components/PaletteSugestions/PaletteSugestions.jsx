@@ -23,17 +23,16 @@ export default class PaletteSugestions extends React.Component {
 
     apiService
     .getSugestedPalettes()
-    .then(data => {
-      data.palettes.map(palette => {
-        this.state.palettes.push(palette)
-      });
-    }
-    )
+    .then(data => { data.palettes
+      .map(palette => ({sort: Math.random(), value: palette}))
+      .sort((paletteA, paletteB) => paletteA.sort - paletteB.sort)
+      .map((palette) => this.state.palettes.push(palette.value))
+    })
     .catch(error => {
       console.log(error);
     });
-  }
-  
+    }
+
   createSugestedPalette(){
     let ColorScheme = require('color-scheme');
     let colorScheme = new ColorScheme;
@@ -68,19 +67,19 @@ export default class PaletteSugestions extends React.Component {
   }
 
   render() {
-    const mobileContent = (
+    let mobileContent = (
       <div>
         <Header function={this.props.function}/>      
         <PalettesGrid allPalettes={this.state.palettes}/>
       </div>
     )
-    const desktopContent = (
+    let desktopContent = (
       <div>
         <Header function={this.props.function}/>      
         <PalettesGrid allPalettes={this.state.palettes}/>
       </div>
     )
-    return <MatchMediaWrapper mobileContent={mobileContent} desktopContent={desktopContent}/>
+    return (<MatchMediaWrapper mobileContent={mobileContent} desktopContent={desktopContent}/>)
   
   }
 }
