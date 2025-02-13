@@ -13,25 +13,25 @@ export default function CardColorPreview({palette, schemeLength}) {
 
     switch(state.schemeLength){
         case 4:
-            state.sampleHeight = '60px'
+            state.cardHeight = '240px'
         break;
         case 6:
-            state.sampleHeight = '40px'
+            state.cardHeight = '360px'
         break;
         case 8:
-            state.sampleHeight = '30px'
+            state.cardHeight = '480px'
         break;
     }
     
     for (let i = 0; i < state.palette.length; i++) {
         samples.push(
-            <div key={i} className='color-sample' style={{'background-color': `#${state.palette[i]}`, 'height': `${state.sampleHeight}`}}></div>
+            <div key={i} className='color-sample' style={{'background-color': `#${state.palette[i]}`}}></div>
         )
     }
     state.colors = samples
 
     return (
-        <div className='color-card' style={{'border-top': `2px solid #${state.palette[0]}44`, 'border-left': `2px solid #${state.palette[0]}44`, 'border-bottom': `2px solid #${state.palette[0]}cc`, 'border-right': `2px solid #${state.palette[0]}cc`}}>
+        <div className='color-card' style={{'height': `${state.cardHeight}`,'border-top': `2px solid #${state.palette[0]}44`, 'border-left': `2px solid #${state.palette[0]}44`, 'border-bottom': `2px solid #${state.palette[0]}cc`, 'border-right': `2px solid #${state.palette[0]}cc`}}>
             {state.colors}
         </div>
     )

@@ -52,11 +52,13 @@ export default class Login extends React.Component {
       <div className="form-page-mobile">
       <div className="banner-mobile">
         <div className='bg-container'>
-          <img className="bg-image-mobile" src={BackgroundImage} />
+            <img className="bg-image-mobile" src={BackgroundImage} />
         </div>
       </div>
       <div className='center'>
-        <img className="logo" src={Logo} />
+        <Link to="/home">
+          <img className="logo" src={Logo} />
+        </Link>
         <h2>Seja bem-vindo,<br/>novamente!</h2>
         <div className="form-login-mobile">
           <div className="form">
@@ -82,7 +84,9 @@ export default class Login extends React.Component {
       <div className="form-page">
         <div className="banner">
           <img className="bg-image" src={BackgroundImage} />
-          <img className="logo-icon" src={LogoIcon} />
+          <Link to="/home">
+            <img className="logo-icon" src={LogoIcon} />
+          </Link>
           <h2>Seja<br/>bem-vindo,<br/>novamente!</h2>
         </div>
         <div className="form-login">

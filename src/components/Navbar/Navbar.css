@@ -1,0 +1,129 @@
+.navbar-item{
+    padding: 10px;
+}
+
+.palette-hamburger{
+    rotate: -90deg;
+    max-height: 50px !important;
+    cursor: pointer;
+}
+
+.header-actions{
+    border: 1px solid #000;
+    padding: 8px;
+    margin: 5px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.login{
+    background-color: #000;
+    color: #fff;
+}
+
+.profile-icon{
+    height: 32px !important;
+    cursor: pointer;
+}
+
+.logout{
+    color: #ee0304;
+}
+
+.access-profile{
+    text-decoration: none;
+}
+
+.sidebar-wrapper{
+    height: 100vh;
+    position: fixed;
+    top: 50px;
+    background-color: #fff;
+}
+
+.openned{
+    box-shadow: -6px 18px 18px 2px rgba(0,0,0,0.75);
+    width: 240px;
+    padding: 25px;
+    animation-name: openning;
+    animation-duration: 0.5s;
+}
+
+.closed{
+    width: 0px;
+    padding: 0px;
+    animation-name: closing;
+    animation-duration: 0.5s;
+}
+
+.sidebar-openned{
+    display: block;
+    opacity: 1;
+    animation-name: openning-items;
+    animation-duration: 1s;
+}
+
+.sidebar-closed{
+    display: none;
+    opacity: 0;
+    animation-name: closing-items;
+    animation-duration: 1s;
+}
+
+.sidebar{
+    height: calc(100% - 50px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.sidebar-top{
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar-item{
+    margin-bottom: 10px;
+    color: #000;
+    text-decoration: none;
+    font-size: 18px;
+    margin-left: 0px;
+    padding: 0px;
+}
+
+.sidebar-openned .sidebar-down .logout{
+    width: 190px;
+    background-color: #ee0304;
+    color: #fff;
+    border-radius: 8px;
+    padding: 8px 16px;
+    animation-name: openning-button;
+    animation-duration: 0.5s;
+}
+
+/* Animations */
+
+@keyframes openning {
+    from {width: 0px;}
+    to {width: 240px;}
+}
+
+@keyframes closing {
+    from {width: 240px;}
+    to {width: 0px;}
+}
+
+@keyframes openning-items {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes closing-item {
+    from {opacity: 1;}
+    to {opacity: 0;}
+}
+
+@keyframes openning-button {
+    from {width: 0;}
+    to {width: 190px;}
+}

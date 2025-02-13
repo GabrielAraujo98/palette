@@ -62,7 +62,9 @@ export default class Cadastro extends React.Component {
         </div>
       </div>
       <div className='center'>
-        <img className="logo" src={Logo} />
+        <Link to="/home">
+          <img className="logo" src={Logo} />
+        </Link>
         <h2>Olá! as paletas,<br/>te esperam!</h2>
         <div className="form-cadastro-mobile">
           <div className="form">
@@ -121,7 +123,9 @@ export default class Cadastro extends React.Component {
         </div>
         <div className="banner">
           <img className="bg-image" src={BackgroundImage} />
-          <img className="logo-desktop" src={Logo} />
+          <Link to="/home">
+            <img className="logo-desktop" src={Logo} />
+          </Link>
           <h2>Olá!<br/>As paletas<br/>te esperam!</h2>
         </div>
       </div>

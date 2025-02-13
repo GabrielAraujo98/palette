@@ -5,7 +5,7 @@ import MatchMediaWrapper from '../../mediaMatcher/mediaMatcher';
 import apiService from '../../services/apiServices';
 import CardColorPreview from '../Assets/CardColorPreview/CardColorPreview'
 import PalettesGrid from '../Assets/PalettesGrid/PalettesGrid';
-import Header from '../../main/components/Header';
+import Navbar from '../Navbar';
 export default class PaletteSugestions extends React.Component {
 
   constructor(props){
@@ -51,7 +51,6 @@ export default class PaletteSugestions extends React.Component {
 
     console.log(this.state.colors);
     
-    
     // apiService
     //     .createSugestedPalette(6, this.state.colors, this.state.scheme, this.state.variation)
     //     .then(data => {
@@ -63,19 +62,18 @@ export default class PaletteSugestions extends React.Component {
     //       console.log(error);
     //     });
 
-     
   }
 
   render() {
     let mobileContent = (
       <div>
-        <Header function={this.props.function}/>      
+        <Navbar/>
         <PalettesGrid allPalettes={this.state.palettes}/>
       </div>
     )
     let desktopContent = (
       <div>
-        <Header function={this.props.function}/>      
+        <Navbar/>
         <PalettesGrid allPalettes={this.state.palettes}/>
       </div>
     )

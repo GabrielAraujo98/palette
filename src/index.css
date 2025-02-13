@@ -1,21 +1,22 @@
 body{
-    height: 100vh;
     width: 100% !important;
     background-color: #f9f9f9;
+}
+.navbar {
+    height: 50px;
 }
 
 .buttons{
     margin-right: 1rem;
 }
-
 @media (max-width: 1024px){
     .navbar {
         display: flex !important;
         flex-direction: row !important;
     }
     .navbar-brand{
-        width: 97%;
-        justify-content: flex-start !important;   
+        width: calc(100% - 60px);
+        justify-content: flex-start !important;
     }
     .buttons{
         width: 3%;
@@ -28,7 +29,7 @@ body{
         flex-direction: row !important;
     }
     .navbar-brand{
-        width: 94%;
+        width: calc(100% - 60px);
         justify-content: flex-start !important;   
     }
     .buttons{

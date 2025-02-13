@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import styles from './PalettesGrid.css';
 import { Link } from 'react-router-dom';
-import apiService from '../../../services/apiServices';
 import CardColorPreview from '../CardColorPreview/CardColorPreview';
 
 export default function PalettesGrid({allPalettes}){

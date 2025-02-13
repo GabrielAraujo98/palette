@@ -3,7 +3,7 @@ import {useState, useEffect} from 'react'
 const MatchMediaWrapper = ({mobileContent, desktopContent}) => {
     const [isNarrowScreen, setIsNarrowScreen] = useState(false)
     useEffect(() => {
-      const mediaWatcher = window.matchMedia("(max-width: 1000px)")
+      const mediaWatcher = window.matchMedia("(max-width: 1024px)")
       setIsNarrowScreen(mediaWatcher.matches);
   
       function updateIsNarrowScreen(e) {

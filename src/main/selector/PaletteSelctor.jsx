@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 
 import PreviewThree from './img/tile-palette-3.png'
 import PreviewFive from './img/tile-palette-5.png'
-import Header from '../components/Header'
+import Navbar from '../../components/Navbar'
 import PaletteButton from '../components/PaletteButton'
 
 export default class PaletteSelector extends Component {
@@ -10,7 +10,7 @@ export default class PaletteSelector extends Component {
     render() {
         return (
             <div>
-                <Header function={this.props.function} />
+                <Navbar />
                 <h1 className='title has-text-centered' style={{ color: "#45E79C" }} >
                     Welcome to Palette!
                 </h1>

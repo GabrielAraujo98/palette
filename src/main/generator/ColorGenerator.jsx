@@ -1,11 +1,11 @@
 import React, { Component } from 'react'
-import Header from '../components/Header'
+import Navbar from '../../components/Navbar'
 export default class ColorGenerator extends Component {    
 
     render() {
         return (
             <div>
-                <Header function={this.props.function}/>      
+                <Navbar/>      
                 <div className='columns'>      
                 {
                     this.props.colors
