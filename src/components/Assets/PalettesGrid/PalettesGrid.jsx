@@ -3,7 +3,7 @@ import styles from './PalettesGrid.css';
 import { Link } from 'react-router-dom';
 import CardColorPreview from '../CardColorPreview/CardColorPreview';
 
-export default function PalettesGrid({allPalettes}){
+const PalettesGrid = ({allPalettes}) => {
     let samples = []
     let [palettes, setPalettes] = useState([])
 
@@ -18,7 +18,9 @@ export default function PalettesGrid({allPalettes}){
       }
 
       useEffect(() => {
-        setPalettes(samples)
+        setTimeout(() => {
+          setPalettes(samples)
+        }, 1)
       })
 
     return (
@@ -28,3 +30,5 @@ export default function PalettesGrid({allPalettes}){
     )
 
 }
+
+export default PalettesGrid

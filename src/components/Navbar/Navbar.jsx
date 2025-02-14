@@ -5,7 +5,7 @@ import LogoIcon from '../../main/components/img/palette-icon.png'
 import ProfileIcon from '../../main/components/img/profile-icon.png'
 import MatchMediaWrapper from '../../mediaMatcher/mediaMatcher';
 
-export default function Navbar(){
+const Navbar = () => {
 
     const [isActive, setIsActive] = useState('')
     const [handleAtivo, setHandleAtivo] = useState('')
@@ -46,8 +46,10 @@ export default function Navbar(){
                     </div>
                     <div className="dropdown-menu" id="dropdown-menu" role="menu">
                         <div className="dropdown-content">
-                        <Link className="dropdown-item access-profile" to="/perfil">Minha área</Link>
-                        <button className="dropdown-item logout">Sair</button>
+                            <Link className="dropdown-item links" to="/login">Login</Link>
+                            <Link className="dropdown-item links" to="/cadastro">Cadastre-se</Link>
+                            <Link className="dropdown-item links" to="/perfil">Minha área</Link>
+                            <button className="dropdown-item logout">Sair</button>
                         </div>
                     </div>
                 </div>
@@ -68,7 +70,7 @@ export default function Navbar(){
                     </div>
                     <div className="dropdown-menu" id="dropdown-menu" role="menu">
                         <div className="dropdown-content">
-                        <Link className="dropdown-item access-profile" to="/perfil">Minha área</Link>
+                        <Link className="dropdown-item links" to="/perfil">Minha área</Link>
                         <button className="dropdown-item logout">Sair</button>
                         </div>
                     </div>
@@ -104,3 +106,5 @@ export default function Navbar(){
         </div > 
     )
 }
+
+export default Navbar
