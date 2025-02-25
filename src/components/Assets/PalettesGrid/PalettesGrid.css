@@ -5,3 +5,9 @@
     justify-content: center;
     margin-top: 65px;
 }
+
+.grid-col{
+    width: 180px;
+    padding: 10px;
+    margin: 20px
+}
