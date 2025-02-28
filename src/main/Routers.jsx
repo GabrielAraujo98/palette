@@ -2,9 +2,9 @@ import React, { Component } from 'react'
 import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import Login from './../components/Login'
 import Cadastro from './../components/Cadastro'
-import ColorGenerator from './generator/ColorGenerator'
 import PaletteSelctor from './selector/PaletteSelctor'
 import PaletteSugestions from '../components/PaletteSugestions/PaletteSugestions';
+import PalettesGenerator from '../components/PaletteGenerator/PaletteGenerator';
 export default class Routers extends Component {
 
     constructor(props) {
@@ -22,7 +22,7 @@ export default class Routers extends Component {
                                 functionThree={this.props.selectFunctionThree}
                                 functionFive={this.props.selectFunctionFive}
                             />}/>
-                        <Route exact path="/colorgenerator" element={<ColorGenerator function={this.props.function} colors={this.props.colors} />}/>
+                        <Route exact path="/colorgenerator" element={<PalettesGenerator/>}/>
                         <Route exact path="/*" element={<PaletteSugestions function={this.props.function}/>}/>
                         <Route exact path="/home" element={<PaletteSugestions function={this.props.function}/>}/>
                     </Routes>

@@ -39,6 +39,7 @@
     position: fixed;
     top: 50px;
     background-color: #fff;
+    z-index: 1;
 }
 
 .openned{
@@ -126,4 +127,29 @@
 @keyframes openning-button {
     from {width: 0;}
     to {width: 190px;}
+}
+
+@media (max-width: 450px) {
+    .openned{
+        width: 100%;
+    }
+
+    .sidebar-openned .sidebar-down .logout{
+        width: 100%;
+    }
+
+    @keyframes openning {
+        from {width: 0px;}
+        to {width: 100%;}
+    }
+    
+    @keyframes closing {
+        from {width: 100%;}
+        to {width: 0px;}
+    }
+
+    @keyframes openning-button {
+        from {width: 0;}
+        to {width: 100%;}
+    }
 }
